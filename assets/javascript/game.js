@@ -10,7 +10,7 @@ randomLetter();
 
 //Computer selects a random letter - do a function versus variable because will want to reference function later to start another round
 function randomLetter() {
-	var computerChoice = alphabet [Math.floor(Math.random()*alphabet.length)];
+	computerChoice = alphabet [Math.floor(Math.random()*alphabet.length)];
 	console.log(computerChoice);
 }
 
@@ -30,6 +30,7 @@ document.onkeyup = function(keyPressed) {
 			}
 			else {
 				if (guess === computerChoice) {
+					lettersGuessed = "";
 					wins++; 
 					alert("Winner! To play again, press ok.");
 					console.log(wins);
